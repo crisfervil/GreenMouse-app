@@ -1,0 +1,21 @@
+{
+  "name": "Platypus-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "platypus": "*"
+  },
+  "devDependencies": {
+    "gulp":"*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "config": {
+    "platypus": {
+      "packages": [
+        "platypus","solution1"
+      ]
+    }
+  }
+}
