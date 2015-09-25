@@ -1,5 +1,5 @@
 {
-  "name": "Platypus-app",
+  "name": "GreenMouse-app",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -14,7 +14,7 @@
   "config": {
     "platypus": {
       "packages": [
-        "platypus","solution1"
+        "GreenMouse","solution1"
       ]
     }
   }
