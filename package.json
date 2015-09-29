@@ -9,7 +9,7 @@
     "node": ">=0.10.0"
   },
   "config": {
-    "platypus": {
+    "greenmouse": {
       "packages": [
         "GreenMouse","solution1"
       ]

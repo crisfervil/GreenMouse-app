@@ -4,6 +4,6 @@
 		"fileMatch": [
 			"/app.json"
 		],
-		"url": "./node_modules/platypus/model.json"
+		"url": "./node_modules/greenmouse/model.json"
 	}]
 }
