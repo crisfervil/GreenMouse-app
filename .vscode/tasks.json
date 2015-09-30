@@ -19,7 +19,8 @@
 
 	// args is the HelloWorld program to compile.
 	"args": ["--module", "commonjs", "--target", "es5",  "${file}"],
-	//"args": ["--module", "commonjs", "--target", "es5",  "--p"],
+	// can't compile using target es6 because node doesn't support modules declaration
+	//"args": ["--target", "es6",  "${file}"],
 
 	// use the standard tsc problem matcher to find compile problems
 	// in the output.
