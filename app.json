@@ -4,7 +4,8 @@
     {
       "id": "user",
       "name": "User",
-      "pluralName": "Users"
+      "pluralName": "Users",
+      "connection":{"type":"sqlserver"}
     }
   ],
   "property1":{ "value1": "modified value"},
