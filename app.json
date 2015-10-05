@@ -8,6 +8,5 @@
       "connection":{"type":"sqlserver"}
     }
   ],
-  "property1":{ "value1": "modified value"},
-  "property2":"value2"
+  "configuration":{ "firstDayOfTheWeek": "Monday", "closingDates":["Monday"]}
 }

@@ -2,8 +2,8 @@
 {
 	"json.schemas": [{
 		"fileMatch": [
-			"/app.json"
+			"./data/app.json"
 		],
-		"url": "./node_modules/greenmouse/model.json"
+		"url": "./data/model.json"
 	}]
 }

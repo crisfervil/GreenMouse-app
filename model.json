@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "firstDayOfTheWeek": {
+          "type": "string"
+        },
+        "closingDates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
