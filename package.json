@@ -3,15 +3,21 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "express": "^4.13.3",
     "greenmouse": "*"
   },
   "engines": {
     "node": ">=0.10.0"
   },
+  "scripts": {
+    "start": "node app",
+    "gm": "node node_modules/greenmouse/run"
+  },
   "config": {
     "greenmouse": {
       "packages": [
-        "GreenMouse","solution1"
+        "GreenMouse",
+        "solution1"
       ]
     }
   }

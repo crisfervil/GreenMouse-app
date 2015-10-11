@@ -1,5 +1,5 @@
 {
-  "name": "My Green Mouse applicaton",
+  "name": "My Green Mouse application",
   "entities": [
     {
       "id": "user",

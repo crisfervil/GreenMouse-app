@@ -47,3 +47,5 @@ app
 data
 node_modules
 typings
+.idea/
+.vscode/
