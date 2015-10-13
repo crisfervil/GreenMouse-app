@@ -46,6 +46,10 @@ admin
 app
 data
 node_modules
+# tsd typing files
 typings
+# Webstorm configuration files
 .idea/
+# Visual Studio Code configuration files
 .vscode/
+*.log

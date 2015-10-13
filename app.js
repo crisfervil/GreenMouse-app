@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 //load routes
-require("./app/routes/entities/meta_entity")(app);
+require("./app/routes/meta_entity")(app);
 
 app.get('/test', function(req, res) {
     res.send("hello world");
