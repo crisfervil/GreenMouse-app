@@ -46,6 +46,8 @@ admin
 app
 data
 node_modules
+# test are auto generated
+test
 # Webstorm configuration files
 .idea/
 # Visual Studio Code configuration files
