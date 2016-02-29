@@ -1,5 +1,5 @@
 {
-  "name": "My Green Mouse application",
+  "name": "My Jigsaw application",
   "entities": [
     {
       "id": "user",
@@ -7,6 +7,5 @@
       "pluralName": "Users",
       "connection":{"type":"sqlserver"}
     }
-  ],
-  "configuration":{ "firstDayOfTheWeek": "Monday", "closingDates":["Monday"]}
+  ]
 }

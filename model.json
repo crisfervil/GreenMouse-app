@@ -1,18 +1,147 @@
 {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
   "properties": {
-    "configuration": {
+    "system": {
+      "id": "system",
       "type": "object",
       "properties": {
-        "firstDayOfTheWeek": {
-          "type": "string"
-        },
-        "closingDates": {
-          "type": "array",
+        "buildmode": {
+          "id": "buildmode",
+          "type": "string",
+          "default": "release",
+          "enum": [
+            null,
+            "release"
+          ]
+        }
+      },
+      "required": [
+        "buildmode"
+      ]
+    },
+    "entities": {
+      "id": "entities",
+      "type": "array",
+      "items": {
+        "id": "1",
+        "type": "object",
+        "properties": {
+          "id": {
+            "id": "id",
+            "type": "string",
+            "default": "account",
+            "enum": [
+              null,
+              "account"
+            ]
+          },
+          "name": {
+            "id": "name",
+            "type": "string",
+            "default": "Account",
+            "enum": [
+              null,
+              "Account"
+            ]
+          },
+          "pluralName": {
+            "id": "pluralName",
+            "type": "string",
+            "default": "Accounts",
+            "enum": [
+              null,
+              "Accounts"
+            ]
+          },
+          "description": {
+            "id": "description",
+            "type": "string",
+            "default": "Contains information about the Accounts of this company",
+            "enum": [
+              null,
+              "Contains information about the Accounts of this company"
+            ]
+          },
+          "fields": {
+            "id": "fields",
+            "type": "array",
+            "items": {}
+          },
+          "views": {
+            "id": "views",
+            "type": "array",
+            "items": {}
+          },
+          "forms": {
+            "id": "forms",
+            "type": "array",
+            "items": {}
+          }
+        }
+      }
+    },
+    "sitemap": {
+      "id": "sitemap",
+      "type": "array",
+      "items": {
+        "id": "1",
+        "type": "object",
+        "properties": {
+          "id": {
+            "id": "id",
+            "type": "string",
+            "default": "crm",
+            "enum": [
+              null,
+              "crm"
+            ]
+          },
+          "text": {
+            "id": "text",
+            "type": "string",
+            "default": "CRM",
+            "enum": [
+              null,
+              "CRM"
+            ]
+          },
           "items": {
-            "type": "string"
+            "id": "items",
+            "type": "array",
+            "items": {
+              "id": "1",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "id",
+                  "type": "string",
+                  "default": "accounts",
+                  "enum": [
+                    null,
+                    "accounts"
+                  ]
+                },
+                "entity": {
+                  "id": "entity",
+                  "type": "string",
+                  "default": "account",
+                  "enum": [
+                    null,
+                    "account"
+                  ]
+                }
+              }
+            }
           }
         }
       }
     }
-  }
+  },
+  "required": [
+    "system",
+    "entities",
+    "sitemap"
+  ]
 }
