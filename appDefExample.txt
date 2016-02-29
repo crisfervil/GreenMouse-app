@@ -1,0 +1,68 @@
+
+System Configuration
+	Build
+		Mode: Release # Dev or Release
+	mean
+		Build
+			Server: True #Builds the server side
+			Client: True #Builds the client side
+
+	PhoneGap
+		IOS
+		WindowsPhone
+		Android
+
+Sitemap
+	Home
+		Url:/home
+	Accounts
+		Entity:Accounts
+
+Connection
+
+Entities
+	Account
+		Key: accountid
+		Caption: name
+		Plural Name: Accounts
+		Description: Holds information about the accounts
+		Fields
+			accountid
+			name
+				max length:200
+			description
+				max length:600
+		Forms
+			Main
+				Sections
+					Main
+						Items
+							[editor]name
+							[editor]description
+							[map]location
+							[slider] amount
+								min:10
+								max:100
+								step:10
+							[tab] Details
+								pages
+									First
+										Description: Shows whatever
+										Items
+											[editor] name
+											[editor] description
+					Additional Information
+						Fields
+							[editor] description
+		Workflows
+			On Name Change
+				Activities
+					[If] Name equals to "whatever"
+						Send an Email
+
+	Contact
+		Plural Name: contacts
+		Description: Holds information about contacts
+		Fields
+			contactid
+			name
