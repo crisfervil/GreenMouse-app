@@ -1,20 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "/",
   "type": "object",
   "title": "Application",
   "description": "The main object that defines the whole app",
-  "name": "Application",
+  "name": "application",
   "properties": {
     "system": {
-      "id": "system",
       "type": "object",
       "title": "System",
       "description": "Contains configuration parameters of the application",
       "name": "system",
       "properties": {
         "buildmode": {
-          "id": "buildmode",
           "type": "string",
           "title": "Build Mode",
           "description": "The mode the application has to be built",
@@ -26,7 +23,6 @@
           ]
         },
         "sequences": {
-          "id": "sequences",
           "type": "array",
           "title": "Sequences",
           "description": "Sequences configured for this application",
@@ -39,14 +35,12 @@
             "name": "Sequence",
             "properties": {
               "id": {
-                "id": "id",
                 "type": "string",
                 "title": "Id",
                 "description": "Id of the Sequence",
                 "name": "id"
               },
               "increment": {
-                "id": "increment",
                 "type": "integer",
                 "title": "Increment",
                 "description": "The amount the sequence increases after each execution",
@@ -54,7 +48,6 @@
                 "default": 1
               },
               "format": {
-                "id": "format",
                 "type": "string",
                 "title": "Format schema.",
                 "description": "An explanation about the puropose of this instance described by this schema.",
@@ -67,7 +60,6 @@
       }
     },
     "entities": {
-      "id": "entities",
       "type": "array",
       "title": "Entities schema.",
       "description": "An explanation about the puropose of this instance described by this schema.",
@@ -80,7 +72,6 @@
         "name": "Entity",
         "properties": {
           "id": {
-            "id": "id",
             "type": "string",
             "title": "Id schema.",
             "description": "An explanation about the puropose of this instance described by this schema.",
@@ -88,7 +79,6 @@
             "default": "account"
           },
           "name": {
-            "id": "name",
             "type": "string",
             "title": "Name schema.",
             "description": "An explanation about the puropose of this instance described by this schema.",
@@ -96,28 +86,24 @@
             "default": "Account"
           },
           "pluralName": {
-            "id": "pluralName",
             "type": "string",
             "title": "PluralName schema.",
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "pluralName"
           },
           "description": {
-            "id": "description",
             "type": "string",
             "title": "Description schema.",
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "description"
           },
           "idField": {
-            "id": "idField",
             "type": "string",
             "title": "IdField schema.",
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "idField"
           },
           "nameField": {
-            "id": "nameField",
             "type": "string",
             "title": "NameField schema.",
             "description": "An explanation about the puropose of this instance described by this schema.",
@@ -125,41 +111,35 @@
             "default": "name"
           },
           "fields": {
-            "id": "fields",
             "type": "array",
             "title": "Fields schema.",
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "fields",
             "items": {
-              "id": "field",
               "type": "object",
               "title": "Field",
               "description": "An explanation about the puropose of this instance described by this schema.",
               "name": "field",
               "properties": {
                 "id": {
-                  "id": "id",
                   "type": "string",
                   "title": "Id schema.",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "id"
                 },
                 "label": {
-                  "id": "label",
                   "type": "string",
                   "title": "Label schema.",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "label"
                 },
                 "description": {
-                  "id": "description",
                   "type": "string",
                   "title": "Description schema.",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "description"
                 },
                 "type": {
-                  "id": "type",
                   "type": "string",
                   "title": "Type schema.",
                   "description": "An explanation about the puropose of this instance described by this schema.",
@@ -173,8 +153,13 @@
                     "lookup"
                   ]
                 },
+                "format": {
+                  "type": "string",
+                  "title": "Format",
+                  "description": "An explanation about the puropose of this instance described by this schema.",
+                  "name": "format"
+                },
                 "required": {
-                  "id": "required",
                   "type": "boolean",
                   "title": "Required schema.",
                   "description": "An explanation about the puropose of this instance described by this schema.",
@@ -182,7 +167,6 @@
                   "default": false
                 },
                 "values": {
-                  "id": "values",
                   "type": "array",
                   "title": "Values schema.",
                   "description": "An explanation about the puropose of this instance described by this schema.",
@@ -195,14 +179,12 @@
                     "name": "optionsetValue",
                     "properties": {
                       "id": {
-                        "id": "id",
                         "type": "integer",
                         "title": "Id schema.",
                         "description": "An explanation about the puropose of this instance described by this schema.",
                         "name": "id"
                       },
                       "text": {
-                        "id": "text",
                         "type": "string",
                         "title": "Text schema.",
                         "description": "An explanation about the puropose of this instance described by this schema.",
@@ -210,12 +192,45 @@
                       }
                     }
                   }
-                }
+                },
+                "maxLength": {
+                  "type": "number",
+                  "title": "Max Length",
+                  "description": "An explanation about the puropose of this instance described by this schema.",
+                  "name": "maxLength"
+                },
+                "sequence": {
+                  "type": "string",
+                  "title": "Sequence",
+                  "description": "An explanation about the puropose of this instance described by this schema.",
+                  "name": "sequence"
+                },
+                "formula": {
+                  "type": "string",
+                  "title": "Formula",
+                  "description": "An explanation about the puropose of this instance described by this schema.",
+                  "name": "formula"
+                },
+                "defaultValue": {
+                  "type": "string",
+                  "title": "Default Value",
+                  "description": "An explanation about the puropose of this instance described by this schema.",
+                  "name": "defaultValue"
+                },
+                "lookupTypes": {
+                  "type": "array",
+                  "title": "Lookup Types",
+                  "description": "An explanation about the puropose of this instance described by this schema.",
+                  "name": "lookupTypes",
+                  "items":{
+                    "type":"string"
+                  }
+                },
+
               }
             }
           },
           "views": {
-            "id": "views",
             "type": "array",
             "title": "Views",
             "description": "An explanation about the puropose of this instance described by this schema.",
@@ -228,21 +243,18 @@
               "name": "view",
               "properties": {
                 "id": {
-                  "id": "id",
                   "type": "string",
                   "title": "Id",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "id"
                 },
                 "name": {
-                  "id": "name",
                   "type": "string",
                   "title": "Name",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "name"
                 },
                 "columns": {
-                  "id": "columns",
                   "type": "array",
                   "title": "Columns",
                   "description": "An explanation about the puropose of this instance described by this schema.",
@@ -255,14 +267,12 @@
                     "name": "column",
                     "properties": {
                       "id": {
-                        "id": "id",
                         "type": "string",
                         "title": "Id",
                         "description": "An explanation about the puropose of this instance described by this schema.",
                         "name": "id"
                       },
                       "width": {
-                        "id": "width",
                         "type": "integer",
                         "title": "Width",
                         "description": "An explanation about the puropose of this instance described by this schema.",
@@ -273,14 +283,12 @@
                   }
                 },
                 "filter": {
-                  "id": "filter",
                   "type": "object",
                   "title": "Filter",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "filter",
                   "properties": {
                     "operator": {
-                      "id": "operator",
                       "type": "string",
                       "title": "Operator",
                       "description": "An explanation about the puropose of this instance described by this schema.",
@@ -292,7 +300,6 @@
                       ]
                     },
                     "conditions": {
-                      "id": "conditions",
                       "type": "array",
                       "title": "Conditions",
                       "description": "An explanation about the puropose of this instance described by this schema.",
@@ -305,14 +312,12 @@
                         "name": "condition",
                         "properties": {
                           "field": {
-                            "id": "field",
                             "type": "string",
                             "title": "Field",
                             "description": "An explanation about the puropose of this instance described by this schema.",
                             "name": "field"
                           },
                           "operator": {
-                            "id": "operator",
                             "type": "string",
                             "title": "Operator",
                             "description": "An explanation about the puropose of this instance described by this schema.",
@@ -332,7 +337,6 @@
                             ]
                           },
                           "values": {
-                            "id": "values",
                             "type": "array",
                             "title": "Values",
                             "description": "An explanation about the puropose of this instance described by this schema.",
@@ -354,7 +358,6 @@
             }
           },
           "forms": {
-            "id": "forms",
             "type": "array",
             "title": "Forms",
             "description": "An explanation about the puropose of this instance described by this schema.",
@@ -367,28 +370,24 @@
               "name": "form",
               "properties": {
                 "id": {
-                  "id": "id",
                   "type": "string",
                   "title": "Id",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "id"
                 },
                 "title": {
-                  "id": "title",
                   "type": "string",
                   "title": "Title",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "title"
                 },
                 "description": {
-                  "id": "description",
                   "type": "string",
                   "title": "Description",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "description"
                 },
                 "sections": {
-                  "id": "sections",
                   "type": "array",
                   "title": "Sections",
                   "description": "An explanation about the puropose of this instance described by this schema.",
@@ -401,28 +400,24 @@
                     "name": "section",
                     "properties": {
                       "id": {
-                        "id": "id",
                         "type": "string",
                         "title": "Id",
                         "description": "An explanation about the puropose of this instance described by this schema.",
                         "name": "id"
                       },
                       "text": {
-                        "id": "text",
                         "type": "string",
                         "title": "Text",
                         "description": "An explanation about the puropose of this instance described by this schema.",
                         "name": "text"
                       },
                       "description": {
-                        "id": "description",
                         "type": "string",
                         "title": "Description",
                         "description": "An explanation about the puropose of this instance described by this schema.",
                         "name": "description"
                       },
                       "content": {
-                        "id": "content",
                         "type": "array",
                         "title": "Content",
                         "description": "An explanation about the puropose of this instance described by this schema.",
@@ -435,21 +430,25 @@
                           "name": "control",
                           "properties": {
                             "id": {
-                              "id": "id",
                               "type": "string",
                               "title": "Id",
                               "description": "An explanation about the puropose of this instance described by this schema.",
                               "name": "id"
                             },
                             "field": {
-                              "id": "field",
                               "type": "string",
                               "title": "Field",
                               "description": "An explanation about the puropose of this instance described by this schema.",
                               "name": "field"
                             },
+                            "required": {
+                              "type": "boolean",
+                              "title": "Required",
+                              "description": "An explanation about the puropose of this instance described by this schema.",
+                              "name": "required",
+                              "default": false
+                            },
                             "visible": {
-                              "id": "visible",
                               "type": "boolean",
                               "title": "Visible",
                               "description": "An explanation about the puropose of this instance described by this schema.",
@@ -457,7 +456,6 @@
                               "default": true
                             },
                             "labelVisible": {
-                              "id": "labelVisible",
                               "type": "boolean",
                               "title": "LabelVisible",
                               "description": "An explanation about the puropose of this instance described by this schema.",
@@ -465,12 +463,18 @@
                               "default": true
                             },
                             "enabled": {
-                              "id": "enabled",
                               "type": "boolean",
                               "title": "Enabled",
                               "description": "An explanation about the puropose of this instance described by this schema.",
                               "name": "enabled",
                               "default": true
+                            },
+                            "spreadAvailableHeight": {
+                              "type": "boolean",
+                              "title": "Spread Available Height",
+                              "description": "An explanation about the puropose of this instance described by this schema.",
+                              "name": "spreadAvailableHeight",
+                              "default": false
                             }
                           }
                         }
@@ -485,7 +489,6 @@
       }
     },
     "sitemap": {
-      "id": "sitemap",
       "type": "array",
       "title": "Sitemap schema.",
       "description": "An explanation about the puropose of this instance described by this schema.",
@@ -498,27 +501,30 @@
         "name": "link",
         "properties": {
           "id": {
-            "id": "id",
             "type": "string",
             "title": "Id",
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "id"
           },
           "text": {
-            "id": "text",
             "type": "string",
             "title": "Text",
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "text"
           },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "url"
+          },
           "items": {
-            "id": "items",
             "type": "array",
             "title": "Items",
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "items",
             "items": {
-              "$ref": "#/sitemap/link"
+              "$ref": "#sitemap/link"
             }
           }
         }
