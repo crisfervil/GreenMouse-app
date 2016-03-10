@@ -212,7 +212,6 @@
                   "name": "formula"
                 },
                 "defaultValue": {
-                  "type": "string",
                   "title": "Default Value",
                   "description": "An explanation about the puropose of this instance described by this schema.",
                   "name": "defaultValue"
@@ -225,8 +224,7 @@
                   "items":{
                     "type":"string"
                   }
-                },
-
+                }
               }
             }
           },
@@ -494,7 +492,6 @@
       "description": "An explanation about the puropose of this instance described by this schema.",
       "name": "sitemap",
       "items": {
-        "id": "link",
         "type": "object",
         "title": "Link",
         "description": "An explanation about the puropose of this instance described by this schema.",
@@ -524,7 +521,7 @@
             "description": "An explanation about the puropose of this instance described by this schema.",
             "name": "items",
             "items": {
-              "$ref": "#sitemap/link"
+              "$ref": "#sitemap/items"
             }
           }
         }
