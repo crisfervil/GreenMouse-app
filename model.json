@@ -66,13 +66,6 @@
                             }
                         }
                     }
-                },
-                "dependencies": {
-                    "type": "object",
-                    "title": "Dependencies",
-                    "description": "The packages to be installed in the module on build",
-                    "name": "dependencies",
-                    "additionalProperties": true
                 }
             }
         },
